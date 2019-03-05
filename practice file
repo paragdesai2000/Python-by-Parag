@@ -1,4 +1,0 @@
-p = parag
-d = desai
-
-print(p, d)
