@@ -1,7 +1,7 @@
 # Python-by-Parag
 
-#Introduction - This repositary contains a collection of my practice code and a summary of the concepts I learned in the certification I attained called Python for Everybody from University of Michigan offered through Coursera. The purpose of these files are to show my basic understanding of Python 3. My intent was to use my own content to use and not the content available from the certification. I did not want to use the same content that everyone in the class already used.
+This repositary contains a collection of my practice code and a summary of the concepts I learned in the Python for Everybody Certification from University of Michigan offered through Coursera. The purposeis to show my basic understanding of Python 3. 
 
-#Content
+I work in the software industry as a business analyst gathering and documenting requirements for developers to develop that is why my files have be written in a User Story format. I want to display my ability to write user stories as a BA and to develop the requirements as a learning programmer.
 
-#Folder Structure
+My intent was to create & use my own content to used and not the content available from the certification. 
