@@ -9,7 +9,7 @@ Requirements:
 5 - Open Sample File - Cars and print everything but the Company information
 6 - Rewrite requirement 2 as a function
 7 - Rewrite requirement 3 as a function
-.............................................................................................
+..............................................................................................................................
 
 #Requirement 1
 f_hand = open('Sample File - Cars.txt')
