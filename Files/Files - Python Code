@@ -1,6 +1,7 @@
-#Story: As a learner of python 3, I want the ability to open and search through the file called "Sample File - Cars".
+Story: 
+As a learner of python 3, I want the ability to open and search through the file called "Sample File - Cars".
 
-#Requirement 1 - Open Sample File - Cars and display the file handle
+Requirement 1 - Open Sample File - Cars and display the file handle
 f_hand = open('Sample File - Cars.txt')
 print(f_hand)   #file handle will display here <_io.TextIOWrapper name='Sample File - Cars.txt' mode='r' encoding='cp1252'>
 f_read = f_hand.read()
