@@ -1,0 +1,52 @@
+#Story: As a learner of python 3, I want the ability to open and search through the file called "Sample File - Cars".
+
+#Requirement 1 - Open Sample File - Cars and display the file handle
+f_hand = open('Sample File - Cars.txt')
+print(f_hand)   #file handle will display here <_io.TextIOWrapper name='Sample File - Cars.txt' mode='r' encoding='cp1252'>
+f_read = f_hand.read()
+print(f_read)
+
+#Requirement 2 - Open Sample File - Cars and count how many lines exist
+f_hand = open('Sample File - Cars.txt')
+count = 0
+for line in f_hand:
+    count = count + 1
+print('Line Count:', count)
+
+#Requirement 3 - Open Sample File - Cars and count how many characters exist
+f_hand = open('Sample File - Cars.txt')
+f_len = len(f_hand.read())
+print('File Length: ', f_len)
+
+#Requirement 5 - Open Sample File - Cars and find all cars that are mentioned
+f_hand = open('Sample File - Cars.txt')
+for line in f_hand:
+    line = line.strip()
+    if line.startswith('Car:'):
+        print(line)
+
+#Requirement 6 - Open Sample File - Cars and print everything but the Company information
+f_hand = open('Sample File - Cars.txt')
+for line in f_hand:
+    line = line.strip()
+    if line.startswith('Company:'): #skip unwanted lines
+        continue
+    if line.startswith('Company Description:'):
+        continue
+    if line.startswith('Company Cars:'):
+        continue
+    print(line)
+
+#Requirement 7 - Rewrite requirement 2 as a function
+f_name = input('Enter file name: ')
+f_hand_2 = open(f_name)
+count = 0
+for line in f_hand_2:
+    count = count + 1
+print('There are', count, 'lines in this file')
+
+#Requirement 8 - Rewrite requirement 3 as a function
+f_name = input('Enter file name: ')
+f_hand_2 = open(f_name)
+f_len = len(f_hand_2.read())
+print('File Length: ', f_len)
