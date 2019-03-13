@@ -1,32 +1,42 @@
 Story: 
 As a learner of python 3, I want the ability to open and search through the file called "Sample File - Cars".
 
-Requirement 1 - Open Sample File - Cars and display the file handle
+Requirements:
+1 - Open Sample File - Cars and display the file handle
+2 - Open Sample File - Cars and count how many lines exist
+3 - Open Sample File - Cars and count how many characters exist
+4 - Open Sample File - Cars and find all cars that are mentioned
+5 - Open Sample File - Cars and print everything but the Company information
+6 - Rewrite requirement 2 as a function
+7 - Rewrite requirement 3 as a function
+.............................................................................................
+
+#Requirement 1
 f_hand = open('Sample File - Cars.txt')
 print(f_hand)   #file handle will display here <_io.TextIOWrapper name='Sample File - Cars.txt' mode='r' encoding='cp1252'>
 f_read = f_hand.read()
 print(f_read)
 
-#Requirement 2 - Open Sample File - Cars and count how many lines exist
+#Requirement 2
 f_hand = open('Sample File - Cars.txt')
 count = 0
 for line in f_hand:
     count = count + 1
 print('Line Count:', count)
 
-#Requirement 3 - Open Sample File - Cars and count how many characters exist
+#Requirement 3
 f_hand = open('Sample File - Cars.txt')
 f_len = len(f_hand.read())
 print('File Length: ', f_len)
 
-#Requirement 5 - Open Sample File - Cars and find all cars that are mentioned
+#Requirement 4
 f_hand = open('Sample File - Cars.txt')
 for line in f_hand:
     line = line.strip()
     if line.startswith('Car:'):
         print(line)
 
-#Requirement 6 - Open Sample File - Cars and print everything but the Company information
+#Requirement 5
 f_hand = open('Sample File - Cars.txt')
 for line in f_hand:
     line = line.strip()
@@ -38,7 +48,7 @@ for line in f_hand:
         continue
     print(line)
 
-#Requirement 7 - Rewrite requirement 2 as a function
+#Requirement 6
 f_name = input('Enter file name: ')
 f_hand_2 = open(f_name)
 count = 0
@@ -46,8 +56,8 @@ for line in f_hand_2:
     count = count + 1
 print('There are', count, 'lines in this file')
 
-#Requirement 8 - Rewrite requirement 3 as a function
+#Requirement 7
 f_name = input('Enter file name: ')
 f_hand_2 = open(f_name)
 f_len = len(f_hand_2.read())
-print('File Length: ', f_len)
+print('There are', f_len, 'characters in this file')
