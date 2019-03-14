@@ -50,6 +50,11 @@ for line in f_hand:
 
 #Requirement 6
 f_name = input('Enter file name: ')
+try:
+    f_try = open(f_name)
+except:
+    print('File cannot be opened:', f_name)
+    exit()
 f_hand_2 = open(f_name)
 count = 0
 for line in f_hand_2:
@@ -58,6 +63,11 @@ print('There are', count, 'lines in this file')
 
 #Requirement 7
 f_name = input('Enter file name: ')
+try:
+    f_try = open(f_name)
+except:
+    print('File cannot be opened:', f_name)
+    exit()
 f_hand_2 = open(f_name)
 f_len = len(f_hand_2.read())
 print('There are', f_len, 'characters in this file')
