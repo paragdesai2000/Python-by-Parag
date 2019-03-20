@@ -19,8 +19,6 @@ for line in f_hand:
     for word in words:
         hyun_lis.append(word)
 
-print(hyun_lis)
-
 f_hand = open('Sample File - Cars.txt')
 for line in f_hand:
     line = line.strip()
@@ -29,8 +27,6 @@ for line in f_hand:
     words = line.split()
     for word in words:
         niss_lis.append(word)
-
-print(niss_lis)
 
 f_hand = open('Sample File - Cars.txt')
 for line in f_hand:
@@ -42,3 +38,5 @@ for line in f_hand:
         ford_lis.append(word)
 
 print(ford_lis)
+print(hyun_lis)
+print(niss_lis)
