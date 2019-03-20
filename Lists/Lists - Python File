@@ -1,0 +1,44 @@
+Story: 
+As a learner of python 3, I want the ability to use List functionality on the file called "Sample File - Cars".
+
+Requirements:
+1 - Create 3 different lists using each company description from Sample File - Cars
+.............................................................................................................................
+
+#Requirement 1
+hyun_lis = []
+niss_lis = []
+ford_lis = []
+
+f_hand = open('Sample File - Cars.txt')
+for line in f_hand:
+    line = line.strip()
+    if not line.startswith('Company Description: The'):
+        continue
+    words = line.split()
+    for word in words:
+        hyun_lis.append(word)
+
+print(hyun_lis)
+
+f_hand = open('Sample File - Cars.txt')
+for line in f_hand:
+    line = line.strip()
+    if not line.startswith('Company Description: Nissan'):
+        continue
+    words = line.split()
+    for word in words:
+        niss_lis.append(word)
+
+print(niss_lis)
+
+f_hand = open('Sample File - Cars.txt')
+for line in f_hand:
+    line = line.strip()
+    if not line.startswith('Company Description: Ford'):
+        continue
+    words = line.split()
+    for word in words:
+        ford_lis.append(word)
+
+print(ford_lis)
