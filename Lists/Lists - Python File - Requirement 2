@@ -2,7 +2,8 @@ Story:
 As a learner of python 3, I want the ability to use List functionality on the file called "Sample File - Cars".
 
 Requirements:
-2 - Using Sample File - Cars create a list of all MSRP values, print all MSRP values (including dollar sign), and print length of MSRP list to console
+2 - Using Sample File - Cars create a list of all MSRP values, print all MSRP values (including dollar sign), and print 
+length of MSRP list to console
 
 .......................................................................................................................................
 
