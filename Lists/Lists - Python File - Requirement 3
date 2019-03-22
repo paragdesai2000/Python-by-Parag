@@ -1,0 +1,29 @@
+Story: 
+As a learner of python 3, I want the ability to use List functionality on the file called "Sample File - Cars".
+
+Requirements:
+3 - Using Sample File - Cars create a list will the horsepower numbers, find the sum of the list, and find the average of the list
+
+.......................................................................................................................................
+
+#Requirement 3
+hp = []
+
+f_hand = open('Sample File - Cars.txt')
+
+for line in f_hand: #loop through file and find all lines that contain horsepower
+    line = line.strip()
+    if not line.startswith('Horsepower'):
+        continue
+
+    words = line.split()
+
+    hp.append(words[1]) #put all numbers in lines which start with horsepower into list
+    hp.append(words[3])
+
+for index in range(0, len(hp)): #convert string to int
+    hp[index] = int(hp[index])
+
+print(hp)   #all hp numbers from file in a list
+print(sum(hp))  #sum of all hp numbers in list
+print(sum(hp)/len(hp))  #average of all hp numbers in list
