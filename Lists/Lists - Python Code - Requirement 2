@@ -24,8 +24,6 @@ for line in f_hand:
         msrp.append(words[2])
 
     for nums in msrp: #print all MSRP values (including dollar sign
-        if nums == str:
-            int(nums)
         print(nums)
 
 print('MSRP is mentioned', len(msrp), 'times in this file') #print length of MSRP list
