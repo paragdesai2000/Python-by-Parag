@@ -3,8 +3,7 @@ As a learner of python 3, I want the ability to use List functionality on the fi
 
 Requirements:
 1 - Using Sample File - Cars create 3 different lists using each company description
-2 - Using Sample File - Cars create a list of all MSRP values, print all MSRP values (including dollar sign), and print length of
-MSRP list to console
+
 .............................................................................................................................
 
 #Requirement 1
@@ -42,25 +41,3 @@ for line in f_hand:
 print(ford_lis)
 print(hyun_lis)
 print(niss_lis)
-
-#Requirement 2
-msrp = []
-
-f_hand = open('Sample File - Cars.txt') #parse msrp numbers and add it to the list
-
-for line in f_hand:
-    line = line.strip()
-    if not line.startswith('MSRP'):
-        continue
-    
-    words = line.split()
-    
-    for word in words:
-        msrp.append(words[2])
-    
-    for nums in msrp: #print all MSRP values (including dollar sign
-        if nums == str:
-            int(nums)
-        print(nums)
-
-print('MSRP is mentioned', len(msrp), 'times in this file') #print length of MSRP list
