@@ -1,0 +1,32 @@
+Story: 
+As a learner of python 3, I want the ability to use Dictionaries functionality on the file called "Sample File - Cars".
+
+Requirements:
+1 - Using Sample File - Cars create a dictionary for all company cars mentioned in the file. Make sure to print all key,value pairs alphabetically
+
+.............................................................................................................................
+
+#Requirement 1
+cars = dict()
+
+f_hand = open('Sample File - Cars.txt')
+
+for line in f_hand:
+    line = line.strip()
+    if not line.startswith('Company Cars'):
+        continue
+
+    words = line.split()
+
+    for word in words:
+        if word not in cars:
+            cars[word] = 1
+        else:
+            cars[word] = cars[word] + 1
+
+order = list(cars.keys())
+
+order.sort()
+
+for key in order:
+    print(key, cars[key])
