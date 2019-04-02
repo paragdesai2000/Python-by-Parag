@@ -10,6 +10,7 @@ Requirements:
 msrp = dict()
 
 f_hand = open('Sample File - Cars.txt')
+
 for line in f_hand:
     line = line.strip()
     if not line.startswith('MSRP:'):
