@@ -1,0 +1,24 @@
+Story: 
+As a learner of python 3, I want the ability to use Dictionaries functionality on the file called "Sample File - Cars".
+
+Requirements:
+3 - Using Sample File - Cars create a dictionary for all the MSRP values. Make sure there is one key with multiple values
+
+.............................................................................................................................
+
+#Requirement 3
+msrp = dict()
+
+f_hand = open('Sample File - Cars.txt')
+for line in f_hand:
+    line = line.strip()
+    if not line.startswith('MSRP:'):
+        continue
+
+    words = line.split()
+    #print(words)
+    
+    #use the setdefault method to create a list as the value for a key even if that key is not already in the dictionary.
+    msrp.setdefault('MSRP', []).append(words[2]) 
+
+print(msrp)
