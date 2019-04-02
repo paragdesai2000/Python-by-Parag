@@ -1,0 +1,30 @@
+Story: 
+As a learner of python 3, I want the ability to use Dictionaries functionality on the file called "Sample File - Cars".
+
+Requirements:
+2 - Using Sample File - Cars create a dictionary for all towing capacity mentioned in the file. Make sure to print the dictionary and the length of the dictionary
+
+.............................................................................................................................
+
+#Requirement 2
+import string
+#print(string.punctuation) #seeing which characters are considered punctuation by python
+
+tow_cap = dict()
+
+f_hand = open('Sample File - Cars.txt')
+
+for line in f_hand:
+    line = line.strip()
+    if not line.startswith('Towing capacity:'):
+        continue
+
+    line = line.translate(line.maketrans('', '', string.punctuation)) #removed the comma using punctuation function
+
+    words2 = line.split()
+
+    for word in words2:
+        tow_cap[word] = tow_cap.get(word,0) + 1 #used the .get method to add each word into the dictionary
+        
+print(tow_cap)
+print('There are', len(tow_cap), 'key,value pairs in the towing capacity dictionary')
