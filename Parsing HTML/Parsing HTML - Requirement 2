@@ -1,0 +1,26 @@
+Story: 
+As a learner of python 3, I want the ability to use BeautifulSoup to parse html from any given web link
+
+Requirements:
+1 - Create a function that parses & prints all attributes from an entered web address
+2 - Insert all attributes into a list and print list
+
+.............................................................................................................................
+
+import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup
+
+url = input('Enter or insert website url: ')
+site = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(site, 'html.parser')
+
+attr_list = []
+
+tags = soup('a')
+for tag in tags:
+    print(print('Attrs:', tag.attrs))
+
+for tag in tags:
+    attr_list.append(tag.attrs)
+
+print(attr_list)
