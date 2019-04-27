@@ -1,0 +1,21 @@
+Story: 
+As a learner of python 3, I want the ability to use BeautifulSoup parse html from any given web link
+
+Requirements:
+1 - Create a function that parses & prints all paragraphs from an entered web address
+2 - Count how many paragraphs exist in the entered web link
+
+.............................................................................................................................
+
+url = input('Enter or insert website url: ')
+site = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(site, 'html.parser')
+
+count = 0
+
+tags = soup.find_all('p')
+for word in tags:
+    count = count + 1
+    print(word.text)
+
+print('This page contains', count, 'paragraphs')
