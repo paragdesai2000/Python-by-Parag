@@ -1,5 +1,5 @@
 Story: 
-As a learner of python 3, I want the ability to use BeautifulSoup parse html from any given web link
+As a learner of python 3, I want the ability to use BeautifulSoup to parse html from any given web link
 
 Requirements:
 1 - Create a function that parses & prints all contents from an entered web address
