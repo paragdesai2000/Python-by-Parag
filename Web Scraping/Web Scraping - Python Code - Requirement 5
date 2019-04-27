@@ -1,0 +1,21 @@
+Story: 
+As a learner of python 3, I want the ability to use BeautifulSoup parse html from any given web link
+
+Requirements:
+1 - Create a function that parses & prints all tables from an entered web address
+
+.............................................................................................................................
+
+import urllib.request, urllib.error, urllib.request
+from bs4 import BeautifulSoup
+
+url = urllib.request.urlopen('https://www.basketball-reference.com/players/j/jordami01.html').read()
+soup = BeautifulSoup(url, 'html.parser')
+
+table = soup.table
+table_rows = table.find_all('tr')
+
+for tr in table_rows:
+    td = tr.find_all('td')
+    row = [i.text for i in td]
+    print(row)
