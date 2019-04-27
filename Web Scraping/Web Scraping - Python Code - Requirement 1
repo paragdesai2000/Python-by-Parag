@@ -1,5 +1,5 @@
 Story: 
-As a learner of python 3, I want the ability to use List functionality on the file called "Sample File - Cars".
+As a learner of python 3, I want the ability to use Beautiful Soup to parse html from any given web link
 
 Requirements:
 1 - Create a function that parses & prints all url links from an entered web address
