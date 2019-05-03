@@ -1,0 +1,44 @@
+Story: 
+As a learner of python 3, I want the ability to use JSON data functionality on the file called "Sample File - Cars"
+
+Requirements:
+1 - Using Sample File - Cars loop through the file and create a dictionary for all Cars and MSRP data
+2 - Write the newly created dictionary to a json file
+3 - Open and print the json file (in json format)
+
+Notes:
+The purpose of this requirement is use loops to create json data, write it to a file, and print the file
+If you try this script out at home please remember to change the file path
+
+........................................................................................................................................
+
+import json
+
+cars = dict()
+
+f_hand = open('Sample File - Cars.txt')
+for line in f_hand:
+    line = line.strip()
+    if not line.startswith('Car:'):
+        continue
+    words = line.split()
+    cars.setdefault('Car', []).append(words[2])
+
+f_hand = open('Sample File - Cars.txt')
+for line in f_hand:
+    line = line.strip()
+    if not line.startswith('MSRP:'):
+        continue
+    words2 = line.split()
+    cars.setdefault('MSRP', []).append(words2[2]) #use the setdefault method to create a list as the value for a key even if that key is not already in the dictionary.
+
+#print(cars)
+
+cars_prices = open('C:\Coursera Courses\Python for Everybody Files\cars_prices.json', 'w', encoding='utf-8')
+cars_prices_dump = json.dump(cars, cars_prices, ensure_ascii=False)
+cars_prices.close()
+
+with open('cars_prices.json') as f:
+    data = json.load(f)
+    data2 = json.dumps(data, indent=2, sort_keys=True)
+    print(data2)
