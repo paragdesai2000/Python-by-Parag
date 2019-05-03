@@ -1,0 +1,72 @@
+Story: 
+As a learner of python 3, I want the ability to use JSON data functionality on the file called "Sample File - Cars"
+
+Requirements:
+1 - Using Sample File - Cars create a JSON string using Hyundai data
+2 - Print the newly created json string
+3 - Print the length of the json string
+4 - Print the python "type" of the json string
+
+Notes:
+The purpose of this requirement is to practice manually typing out json type data. 
+This json string contains a list with nested dictionaries.
+
+..............................................................................................................................
+
+#Requirement 1
+hyundai_json = '''
+[
+  { "Car" : "Hydunai Tucson",
+    "MSRP" : "From $23,000",
+    "MPG" : "Up to 23 city/ 30 highway",
+    "Cargo volume" : "31 ft, 61.9 ft with seat area",
+    "Towing capacity" : "1,000 lbs"
+  },
+  { "Car" : "Hyundai Elantra",
+    "MSRP" : "From $17,200",
+    "MPG" : "Up to 32 city to 40 highway",
+    "Fuel tank capacity" : "14 gal",
+    "Dimensions" : "182 L x 71 W x 57 H",
+    "Horsepower" : "128 to 201 hp"
+  },
+  { "Car" : "Hyundai Kona",
+    "MSRP" : "From $19,990",
+    "MPG" : "Up to 28 city to 32 highway",
+    "Dimensions" : "164 L x 71 W x 61 H",
+    "Cargo volume" : "19.2 ft, 45.8 ft with seat area",
+    "Horsepower": "147 to 175 hp"
+  },
+  { "Car": "Hyundai Santa Fe",
+    "MSRP": "From $25,750",
+    "MPG" : "Up to 22 city to 29 highway",
+    "Dimensions" : "188 L x 74 W x 66 H",
+    "Payload" : "500 to 1,138 lbs",
+    "Cargo volume" : "35.9 ft, 71.3 ft with seat area"
+  },
+  { "Car" : "Hyundai Accent",
+    "MSRP": "From $14,995",
+    "MPG": "Up to 28 city to 38 highway",
+    "Dimensions" : "173 L x 68 W x 57 H",
+    "Fuel tank capacity" : "11.9 gal",
+    "Horsepower" : "130 to 150 hp"
+  },
+  { "Car" : "Hyundai Sonata",
+    "MSRP" : "From $22,500",
+    "MPG" : "Up to 28 city to 37 highway",
+    "Horsepower" : "178 to 245 hp",
+    "Curb weight" : "3,247 to 3,527 lbs",
+    "Dimensions" : "191 L x 73 W x 58 H"
+  },
+  { "Car" : "Hyundai Veloster",
+    "MSRP": "From $18,500",
+    "Horsepower" : "147 to 275 hp",
+    "MPG" : "Up to 28 city to 34 highway",
+    "Curb weight" : "2,822 to 3,036 lbs",
+    "Engine" : "1.6 L 4-cylinder, 2.0 L 4-cylinder"
+  }
+]'''
+
+#Requirements 2,3,and 4
+print(hyundai_json)
+print('The legnth of the file is:', len(data))
+print('The type of the file is:', type(data))
