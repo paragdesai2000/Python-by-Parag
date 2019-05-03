@@ -4,9 +4,8 @@ As a learner of python 3, I want the ability to use JSON data functionality on t
 Requirements:
 1 - Using Sample File - Cars create a dctionary using Nissan data
 2 - Write the newly created dictionary to a json file
-3 - Open the json file and print the following
-    3.1-Nissan Horsepower data
-    3.2-Nissan MPG data
+3 - Open the json file and print the values for Nissan 'horsepower'
+4 - Open the json file and print the values for Nissan 'mpg'
 
 Notes:
 The purpose of this requirement is to manually create a dictionary, turn it into json, write it to a file, and open/parse data from the file.
@@ -36,7 +35,7 @@ nissan_file = open('C:\Coursera Courses\Python for Everybody Files\cars_nissan.j
 nissan_file_dump = json.dump(nissan, nissan_file, ensure_ascii=False)
 nissan_file.close()
 
-#Requirement 3
+#Requirements 3 & 4
 with open('cars_nissan.json') as f:
     data = json.load(f)
     data2 = json.dumps(data['horsepower'], indent=2, sort_keys=True)
