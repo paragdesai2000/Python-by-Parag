@@ -23,12 +23,6 @@ nissan['dimensions'] = ['206 L x 73 W x 69-70 H', '199 L x 77 W x 70 H', '182-18
 nissan['mpg'] = ['16 city / 22 highway', '19 city / 23 highway', '20 city / 27 highway', '124 city to 99 highway', 'Up to 29 city to 37 highway', 'Up to 28 city to 39 highway', '20 city to 28 highway', '20 city to 30 highway', 'Up to 31 city to 39 highway']
 nissan['fuel tank capacity'] = ['13.2 gal', '18 gal', '10.8 gal']
 nissan['transmisson'] = ['6-speed automatic', '6-speed automatic']
-nissan['towing capacity'] = ['6,500 lbs', '6,000 lbs', '1,500 lbs']
-nissan['bed length'] = ['60 to 73.2']
-nissan['range'] = '151 to 226 mi battery-only'
-nissan['battery'] = '40-62 kWh lithium-ion'
-nissan['battary charge time'] = '35h at 110V, 8h at 220V, 0.75h at 440V'
-nissan['cargo volume'] = '31.1 to 32.1 ft, 65 to 67 ft with seat area'
 
 #Requirement 2
 nissan_file = open('C:\Coursera Courses\Python for Everybody Files\cars_nissan.json', 'w', encoding='utf-8')
