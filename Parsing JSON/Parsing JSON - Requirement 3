@@ -30,7 +30,7 @@ for line in f_hand:
     if not line.startswith('MSRP:'):
         continue
     words2 = line.split()
-    cars.setdefault('MSRP', []).append(words2[2]) #use the setdefault method to create a list as the value for a key even if that key is not already in the dictionary.
+    cars.setdefault('MSRP', []).append(words2[2])
 
 #print(cars)
 
