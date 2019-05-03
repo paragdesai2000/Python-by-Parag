@@ -10,6 +10,7 @@ Requirements:
 
 Notes:
 The purpose of this requirement is to manually create a dictionary, turn it into json, write it to a file, and open/parse data from the file.
+If you try this script out at home please remember to change the file path
 
 ........................................................................................................................................
 
