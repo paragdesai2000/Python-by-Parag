@@ -2,7 +2,7 @@ Story:
 As a learner of python 3, I want the ability to use JSON data functionality on the file called "Sample File - Cars"
 
 Requirements:
-1 - Using Sample File - Cars create a dctionary using Nissan data
+1 - Using Sample File - Cars create a dctionary using some of the Nissan data
 2 - Write the newly created dictionary to a json file
 3 - Open the json file and print the values for Nissan 'horsepower'
 4 - Open the json file and print the values for Nissan 'mpg'
@@ -19,10 +19,7 @@ nissan['car'] = ['Nissan GT-R', 'Nissan Frontier', 'Nissan Pathfinder', 'Nissan 
 nissan['msrp'] = ['From $99,990', 'From $18,990', 'From $31,230', 'From $29,990', 'From $17,790', 'From $23,900', 'From $31,270', 'From $33,950', 'From $12,360'] #encode dollar sign according to ascii
 nissan['horsepower'] = ['565 to 600 hp', '130 to 188 hp', '182 to 236 hp', '270 to 300 hp', '109 to 140 hp']
 nissan['engine'] = ['3.8 L V6', '3.5 L V6']
-nissan['dimensions'] = ['206 L x 73 W x 69-70 H', '199 L x 77 W x 70 H', '182-184 L x 69 W x 59 H', '193 L x 73 W x 57 H', '192 L x 75 W x 67 H', '193 L x 73 W x 57 H', '175 L x 67 W x 60 H']
 nissan['mpg'] = ['16 city / 22 highway', '19 city / 23 highway', '20 city / 27 highway', '124 city to 99 highway', 'Up to 29 city to 37 highway', 'Up to 28 city to 39 highway', '20 city to 28 highway', '20 city to 30 highway', 'Up to 31 city to 39 highway']
-nissan['fuel tank capacity'] = ['13.2 gal', '18 gal', '10.8 gal']
-nissan['transmisson'] = ['6-speed automatic', '6-speed automatic']
 
 #Requirement 2
 nissan_file = open('C:\Coursera Courses\Python for Everybody Files\cars_nissan.json', 'w', encoding='utf-8')
