@@ -1,0 +1,57 @@
+Story: 
+As a learner of python 3, I want the ability to use python to create SQLite files & Databases using "Sample File -Cars"
+
+Requirements:
+1-Create a table using data from Sample File - Cars using funtions
+2-Insert values into the database using a function
+3-Print the data using the fetch method using a function(s)
+
+Notes:
+Requirement 1.db can be found in the found in the previous folder
+
+............................................................................................................................
+
+import sqlite3
+
+#create a database file
+conn = sqlite3.connect('Requirement 1.db')
+c = conn.cursor()
+
+#if not means i dont have to comment out the function if the table already exists
+def create_table():
+    c.execute("CREATE TABLE IF NOT EXISTS cars (company TEXT, car TEXT, msrp INTEGER)")
+
+def data_entry():
+    c.execute("INSERT INTO cars VALUES ('Hyundai', 'Tuscon', 23000)")
+    c.execute("INSERT INTO cars VALUES ('Hyundai', 'Elantra', 17200)")
+    c.execute("INSERT INTO cars VALUES ('Hyundai', 'Kona', 19990)")
+    c.execute("INSERT INTO cars VALUES ('Hyundai', 'Santa Fe', 25750)")
+    c.execute("INSERT INTO cars VALUES ('Hyundai', 'Accent', 25750)")
+    c.execute("INSERT INTO cars VALUES ('Hyundai', 'Sonata', 22500)")
+    c.execute("INSERT INTO cars VALUES ('Hyundai', 'Veloster', 18500)")
+    conn.commit()
+
+create_table()
+#data_entry()
+
+def read_db():
+    c.execute("SELECT * FROM cars WHERE company = 'Hyundai'")
+    fetch = c.fetchone()
+    print(fetch)
+
+def read_db_2():
+    c.execute("SELECT * FROM cars WHERE company = 'Hyundai'")
+    fetch2 = c.fetchmany(4)
+    print(fetch2)
+
+def read_db_3():
+    c.execute("SELECT * FROM cars ")
+    for data in c.fetchall():
+        print(data)
+
+read_db()
+read_db_2()
+read_db_3()
+
+c.close()
+conn.close()
