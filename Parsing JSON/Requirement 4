@@ -1,0 +1,33 @@
+Story: 
+As a learner of python 3, I want the ability to request JSON data by calling an url link
+
+Requirements:
+1-Request JSON data using the following link: http://dummy.restapiexample.com/api/v1/employees
+2-Print the average number of employees
+
+Notes:
+This was a random API url found on google. I wanted to use a simple example to practice on
+
+.....................................................................................................................
+
+import urllib.request, urllib.parse, urllib.error
+import json
+
+url = urllib.request.urlopen('http://dummy.restapiexample.com/api/v1/employees').read()
+
+data99 = json.loads(url)
+#print(json.dumps(data99, indent=2))
+
+employees = []
+
+for item in data99:
+    age = item['employee_age']
+    for a in age:
+        employees.append(a)
+
+for index in range(0, len(employees)): #convert string to int
+    employees[index] = int(employees[index])
+
+employees_sum = (sum(employees))
+employees_len = len(employees)
+print(employees_sum/employees_len)
