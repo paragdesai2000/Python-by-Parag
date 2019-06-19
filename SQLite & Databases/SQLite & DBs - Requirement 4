@@ -11,7 +11,7 @@ The Sample File - Cars was used for this requirement. The database for this can 
 
 ...........................................................................................................................
 
-conn = sqlite3.connect('Requirement 3 database.db')
+conn = sqlite3.connect('Requirement 4.db')
 c = conn.cursor()
 
 c.execute("CREATE TABLE IF NOT EXISTS companies (company_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, company_name TEXT)")
