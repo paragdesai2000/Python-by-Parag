@@ -11,9 +11,10 @@ Requirements:
 6-Update where msrp = n/a
 
 Notes:
-Requirement 2.db can be found in the found in the previous folder. I am having trouble finding the code where the tuple gets inserted to the database. I need to recode this...my plan is to figure this out again.
+Requirement 2.db can be found in the found in the previous folder. 
+I am having trouble finding the code where the tuple gets inserted to the database. My plan is to figure this out and recode
 
-...........................................................................................................................
+.............................................................................................................................
 
 car_msrsp_tup = [('Tucson', '$23,000'),('Elantra', '$17,200'), ('Kona', '$19,990'), ('Santa-Fe', '$25,750'),
                  ('Accent', '$14,995'), ('Sonata', '$22,500'), ('Veloster', '$18,500'), ('Nissan', 'n/a'),
