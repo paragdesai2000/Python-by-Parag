@@ -11,6 +11,8 @@ The Sample File - Cars was used for this requirement. The database for this can 
 
 ...........................................................................................................................
 
+import sqlite3
+
 conn = sqlite3.connect('Requirement 4.db')
 c = conn.cursor()
 
