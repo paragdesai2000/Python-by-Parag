@@ -1,0 +1,35 @@
+Story: 
+As a learner of python 3, I want the ability to use use python to create SQLite files with multiple Databases using primary keys and foreign keys (data modeling).
+
+Requirements:
+1-Create multiple tables using primary keys and foreign keys
+2-Insert values into each of these tables
+3-Run querys on both of these tables using joins 
+
+Notes:
+The Sample File - Cars was used for this requirement
+
+...................................................................................................................................
+
+conn = sqlite3.connect('Requirement 3 database.db')
+c = conn.cursor()
+
+c.execute("CREATE TABLE IF NOT EXISTS companies (company_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, company_name TEXT)")
+c.execute("CREATE TABLE IF NOT EXISTS hyundai (car_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, car_name TEXT, msrp INTEGER, company_id INTEGER)")
+c.execute("CREATE TABLE IF NOT EXISTS nissan (car_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, car_name TEXT, msrp INTEGER, company_id INTEGER)")
+c.execute("CREATE TABLE IF NOT EXISTS ford (car_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, car_name TEXT, msrp INTEGER, company_id INTEGER)")
+conn.commit()
+
+c.execute("INSERT INTO companies (company_name) VALUES ('Hyundai')")
+c.execute("INSERT INTO companies (company_name) VALUES ('Nissan')")
+c.execute("INSERT INTO companies (company_name) VALUES ('Ford')")
+
+c.execute("INSERT INTO hyundai (car_name, msrp, company_id) VALUES ('Tuscon', 23000, 1), ('Elantra', 17200, 1), ('Kona', 19900, 1), ('Santa Fe', 25750, 1), ('Accent', 14995, 1), ('Sonata', 22500, 1), ('Veloster', 18500, 1)")
+c.execute("INSERT INTO nissan (car_name, msrp, company_id) VALUES ('GT-R', 99990, 2), ('Frontier', 17200, 2), ('Pathfinder', 19900, 2), ('LEAF', 25750, 2), ('Sentra', 14995, 2), ('Altima', 22500, 2), ('Murano', 18500, 2),('Maxima', 33950, 2), ('Versa', 12360, 2)")
+c.execute("INSERT INTO ford (car_name, msrp, company_id) VALUES ('Mustang', 99990, 3), ('Focus', 17200, 3), ('Escape', 19900, 3), ('F-150', 25750, 3), ('Fusion', 14995, 3), ('Edge', 22500, 3), ('Expedition', 18500, 3)")
+
+conn.commit()
+
+c.execute("SELECT companies.company_name, hyundai.car_name FROM companies join hyundai on companies.company_id = hyundai.company_id")
+
+c.execute("SELECT hyundai.hyn_car_id, hyundai.car_name, hyundai.msrp, nissan.niss_car_id, nissan.car_name, nissan.msrp FROM hyundai JOIN nissan")
