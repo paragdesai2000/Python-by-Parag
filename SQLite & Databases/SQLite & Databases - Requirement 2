@@ -1,0 +1,43 @@
+Story: 
+As a learner of python 3, I want the ability to use python to create SQLite files & Databases by creating a tuple of data from 
+Sample File - Cars
+
+Requirements:
+1-Create a table using data from Sample File - Cars
+2-Create database
+3-Insert tuple values into database
+4-Select all cars and order by descending
+5-Select all where msrp = n/a
+6-Update where msrp = n/a
+
+Notes:
+Requirement 2.db can be found in the found in the previous folder. I am having trouble finding the code where the tuple gets inserted to the database. I need to recode this...my plan is to figure this out again.
+
+...........................................................................................................................
+
+car_msrsp_tup = [('Tucson', '$23,000'),('Elantra', '$17,200'), ('Kona', '$19,990'), ('Santa-Fe', '$25,750'),
+                 ('Accent', '$14,995'), ('Sonata', '$22,500'), ('Veloster', '$18,500'), ('Nissan', 'n/a'),
+                 ('GT-R', '$99,990'), ('Frontier', '$18,990'), ('Pathfinder', '31,230'), ('LEAF', '17,790'),
+                 ('Sentra', '17,790'), ('Altima', '$31,270'), ('Murano', '$33,950'), ('Maxima', '$12,360'),
+                 ('Versa', '$26,395'), ('Ford', 'n/a'), ('Focus', '$17,950'), ('Escape', '$24,105'), ('F-150', '$28,15'),
+                 ('Fusion', '$22,840'), ('Edge', '$29,995'), ('Expedition', '52,130')]
+
+conn = sqlite3.connect('Sample Database - Cars_msrp.db')
+c = conn.cursor()
+
+c.execute("CREATE TABLE IF NOT EXISTS cars_msrp (car TEXT, msrp TEXT, random INTEGER)") #msrp is text and not integer because of the dollar sign symbol
+conn.commit()
+
+c.execute("SELECT car FROM cars_msrp ORDER BY car DESC")
+for row in c:
+    #print(row)
+
+c.execute("SELECT * FROM cars_msrp WHERE msrp='n/a'")
+for row in c:
+    #print(row)
+
+c.execute("UPDATE cars_msrp SET msrp = 'updated' WHERE  msrp = 'n/a'")
+conn.commit()
+
+c.close()
+conn.close()'''
